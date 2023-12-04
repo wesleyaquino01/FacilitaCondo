@@ -3,10 +3,22 @@ const basicAuth = require('express-basic-auth');
 const cookie = require('cookie');
 const jwt = require('jsonwebtoken');
 const app = express()
+const cors = require('cors');
 const port = 3000
 
 const jwtSecretKey = 'sua_chave_secreta';
 var moradoresCondominio = [
+    {
+        "nome_completo": "Nome Completo",
+        "cpf": "123.456.789-00",
+        "idade": 30,
+        "sexo": "Masculino",
+        "responsavel": "Sim",
+        "numero_de_moradores": 2,
+        "cep": "01001-000",
+        "bairro": "aaaa",
+        "complemento": "askaksakskas"
+    }      
 ]
 
 const users = {
@@ -20,6 +32,7 @@ const authMiddleware = basicAuth({
     unauthorizedResponse: 'Autenticação falhou. Forneça credenciais válidas.'
 });
 
+app.use(cors());
 app.use(express.json());
 app.use('/moradores', authMiddleware);
 

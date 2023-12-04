@@ -1,0 +1,20 @@
+<div class="container">
+    <h1>FacilitaCondo</h1>
+    <form action="" id="login-form">
+        <mat-form-field>
+            <mat-label>Digite E-mail</mat-label>
+            <input matInput type="email">
+        </mat-form-field>
+        
+        <mat-form-field>
+            <mat-label>Digite Sua Senha</mat-label>
+            <input matInput [type]="hide ? 'password' : 'text'">
+            <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                [attr.aria-pressed]="hide">
+                <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            </button>
+        </mat-form-field>
+        <button mat-raised-button color="primary" routerLink="pagina-principal">Entrar</button>
+        <a href="">Esqueci Minha Senha</a>
+    </form>
+</div>
