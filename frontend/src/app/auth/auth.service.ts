@@ -5,9 +5,34 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
   providedIn: 'root'
 })
 export class AuthService {
-
+  loginAutenticado = false;
   constructor(private http: HttpClient) {
   }
+
+  ngOnInit(){
+    this.obterLoginStatus();
+  }
+
+  obterLoginStatus(){
+    this.loginAutenticado = !!localStorage.getItem("login");
+  }
+
+
+  // deslogar(){
+
+  // }
+
+  obterDescricaoLogin = () => this.loginAutenticado ? "Estou Autorizado" : "Não Estou Autorizado";
+
+  // loginClick(){
+  //   if(this.loginAutenticado){
+  //     localStorage.clear()
+  //   }else{
+  //     localStorage.setItem("login", "sim")
+  //   }
+  //   this.obterLoginStatus();
+  // }
+
 
   getMoradores() {
     const username = 'Wesley';
