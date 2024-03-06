@@ -27,6 +27,7 @@ import { PaginaPrincipalComponent } from './pagina-principal/pagina-principal.co
 import { HttpClientModule } from '@angular/common/http';
 import { CadastarMoradorComponent } from './cadastar-morador/cadastar-morador.component';
 import { VisualizarMoradoresComponent } from './visualizar-moradores/visualizar-moradores.component';
+import { TabelaComponent } from './tabela/tabela.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { VisualizarMoradoresComponent } from './visualizar-moradores/visualizar-
     AuthComponent,
     PaginaPrincipalComponent,
     CadastarMoradorComponent,
-    VisualizarMoradoresComponent
+    VisualizarMoradoresComponent,
+    TabelaComponent
   ],
   imports: [
     BrowserModule,

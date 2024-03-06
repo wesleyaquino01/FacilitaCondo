@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\wesley\\Desktop\\backend-node\\backend\\backend-FacilitaCondo\\backend-FacilitaCondo.csproj": {}
+    "C:\\Users\\wesley.dias\\Desktop\\FacilitaCondo\\FacilitaCondo\\backend\\backend-FacilitaCondo\\backend-FacilitaCondo.csproj": {}
   },
   "projects": {
-    "C:\\Users\\wesley\\Desktop\\backend-node\\backend\\backend-FacilitaCondo\\backend-FacilitaCondo.csproj": {
+    "C:\\Users\\wesley.dias\\Desktop\\FacilitaCondo\\FacilitaCondo\\backend\\backend-FacilitaCondo\\backend-FacilitaCondo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\wesley\\Desktop\\backend-node\\backend\\backend-FacilitaCondo\\backend-FacilitaCondo.csproj",
+        "projectUniqueName": "C:\\Users\\wesley.dias\\Desktop\\FacilitaCondo\\FacilitaCondo\\backend\\backend-FacilitaCondo\\backend-FacilitaCondo.csproj",
         "projectName": "backend-FacilitaCondo",
-        "projectPath": "C:\\Users\\wesley\\Desktop\\backend-node\\backend\\backend-FacilitaCondo\\backend-FacilitaCondo.csproj",
-        "packagesPath": "C:\\Users\\wesley\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\wesley\\Desktop\\backend-node\\backend\\backend-FacilitaCondo\\obj\\",
+        "projectPath": "C:\\Users\\wesley.dias\\Desktop\\FacilitaCondo\\FacilitaCondo\\backend\\backend-FacilitaCondo\\backend-FacilitaCondo.csproj",
+        "packagesPath": "C:\\Users\\wesley.dias\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\wesley.dias\\Desktop\\FacilitaCondo\\FacilitaCondo\\backend\\backend-FacilitaCondo\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\wesley\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\wesley.dias\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -34,11 +34,6 @@
           "warnAsError": [
             "NU1605"
           ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -55,15 +50,7 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
         }
       }
     }

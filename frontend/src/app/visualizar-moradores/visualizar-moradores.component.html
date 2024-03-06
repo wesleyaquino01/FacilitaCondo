@@ -5,8 +5,14 @@
       <mat-label>Digite o Nome Do Morador</mat-label>
       <input matInput type="text" placeholder="Digite o nome">
     </mat-form-field>
-    <button mat-raised-button color="primary">
+    <button mat-raised-button color="primary" (click)="visualizarMoradores()">
       <mat-icon>search</mat-icon>
     </button>
   </div>
 </div>
+
+<app-tabela></app-tabela>
+
+<!-- <pre *ngIf="mostrarInfo">
+  {{this.dados | json}}
+</pre> -->
