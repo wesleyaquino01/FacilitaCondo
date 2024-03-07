@@ -11,7 +11,7 @@
         <mat-icon>account_circle</mat-icon>
     </button>
     <mat-menu #userAccountMenu [overlapTrigger]="false" yPosition="below">
-        <button mat-menu-item routerLink="#">
+        <button mat-menu-item routerLink="minha-conta">
             <mat-icon>person</mat-icon><span>Minha Conta</span>
         </button>
         <button mat-menu-item routerLink="#">
@@ -21,7 +21,7 @@
             <mat-icon>help</mat-icon><span>Help</span>
         </button>
         <mat-divider></mat-divider>
-        <button mat-menu-item routerLink="/">
+        <button mat-menu-item (click)="deslogar()">
             <mat-icon>exit_to_app</mat-icon>Sair
         </button>
     </mat-menu>
@@ -44,6 +44,9 @@
                     <a mat-list-item routerLink="visualizar-moradores">
                         <mat-icon>remove_red_eye</mat-icon><span>Visualizar</span>
                     </a>
+                    <a mat-list-item routerLink="visualizar-moradores">
+                      <mat-icon>event</mat-icon><span>Eventos</span>
+                  </a>
                 </mat-nav-list>
             </mat-expansion-panel>
             <mat-expansion-panel [class.mat-elevation-z0]="true">

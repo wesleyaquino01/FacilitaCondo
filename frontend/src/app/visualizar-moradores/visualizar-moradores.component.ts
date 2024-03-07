@@ -6,8 +6,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./visualizar-moradores.component.scss']
 })
 export class VisualizarMoradoresComponent {
-  mostrarInfo: boolean = false
-  d?: any;
+  mostrarInfo: boolean = false;
+
   dados = [
     {nome: 'Wesley'},
     {nome: 'Fab Pena'},
@@ -15,13 +15,15 @@ export class VisualizarMoradoresComponent {
     {nome: 'Igor Almeida'}
   ]
 
+  dadosTabela: [] = [];
+
   constructor() {
   }
 
   visualizarMoradores(){
     this.mostrarInfo = true;
-    this.d = {position: 1, name: 'Hydrogen', weight: 1.0079};
-    this.dados.push(this.d)
+    // this.dadosTabela.push()
+    console.log(this.dadosTabela);
   }
 
   // ngOnInit(){

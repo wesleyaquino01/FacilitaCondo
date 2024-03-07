@@ -28,6 +28,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { CadastarMoradorComponent } from './cadastar-morador/cadastar-morador.component';
 import { VisualizarMoradoresComponent } from './visualizar-moradores/visualizar-moradores.component';
 import { TabelaComponent } from './tabela/tabela.component';
+import { MinhaContaComponent } from './minha-conta/minha-conta.component';
+import { EventosComponent } from './eventos/eventos.component';
+import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -37,7 +40,9 @@ import { TabelaComponent } from './tabela/tabela.component';
     PaginaPrincipalComponent,
     CadastarMoradorComponent,
     VisualizarMoradoresComponent,
-    TabelaComponent
+    TabelaComponent,
+    MinhaContaComponent,
+    EventosComponent
   ],
   imports: [
     BrowserModule,
@@ -48,6 +53,8 @@ import { TabelaComponent } from './tabela/tabela.component';
     MatIconModule,
     MatListModule,
     MatToolbarModule,
+    FormsModule,
+    ReactiveFormsModule,
     MatFormFieldModule,
     MatButtonModule,
     MatInputModule,
@@ -60,7 +67,7 @@ import { TabelaComponent } from './tabela/tabela.component';
     MatSnackBarModule,
     MatTableModule,
     MatTooltipModule,
-    MatExpansionModule
+    MatExpansionModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,12 +1,16 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { Router } from '@angular/router';
+import { LocalStorageService } from '../services/local-storage.service';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
+  private apiUrl = 'https://api.example.com';
   loginAutenticado = false;
-  constructor(private http: HttpClient) {
+  constructor(private http: HttpClient, private router: Router, private localStorageService: LocalStorageService) {
   }
 
   ngOnInit(){
@@ -17,10 +21,30 @@ export class AuthService {
     this.loginAutenticado = !!localStorage.getItem("login");
   }
 
+  login(username: string, password: string): Observable<any> {
+    const body = { username, password };
+    return this.http.post<any>(`${this.apiUrl}/login`, body);
+  }
 
-  // deslogar(){
+  logout() {
+    localStorage.removeItem('access_token');
+  }
 
+  // get isAuthenticated(): boolean {
+  //   const token = localStorage.getItem('access_token');
+  //   return !!token;
   // }
+
+  getToken(): boolean {
+    const token = localStorage.getItem('access_token');
+    return !!token;
+  }
+
+
+  deslogar(){
+    this.localStorageService.removeItem('token')
+    this.router.navigate(['/'])
+  }
 
   obterDescricaoLogin = () => this.loginAutenticado ? "Estou Autorizado" : "Não Estou Autorizado";
 

@@ -12,7 +12,7 @@ export interface PeriodicElement {
   styleUrls: ['./tabela.component.scss']
 })
 export class TabelaComponent {
-  displayedColumns: string[] = ['demo-position', 'demo-name', 'demo-weight'];
+  @Input()displayedColumns: string[] = ['demo-position', 'demo-name', 'demo-weight'];
   @Input() dataSource = ELEMENT_DATA;
 }
 
