@@ -27,6 +27,16 @@ import { PaginaPrincipalComponent } from './pagina-principal/pagina-principal.co
 import { HttpClientModule } from '@angular/common/http';
 import { CadastarMoradorComponent } from './cadastar-morador/cadastar-morador.component';
 import { VisualizarMoradoresComponent } from './visualizar-moradores/visualizar-moradores.component';
+import { TabelaComponent } from './tabela/tabela.component';
+import { MinhaContaComponent } from './minha-conta/minha-conta.component';
+import { EventosComponent } from './eventos/eventos.component';
+import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { JwtModule } from "@auth0/angular-jwt";
+
+
+export function tokenGetter() {
+  return localStorage.getItem("access_token");
+}
 
 @NgModule({
   declarations: [
@@ -35,17 +45,29 @@ import { VisualizarMoradoresComponent } from './visualizar-moradores/visualizar-
     AuthComponent,
     PaginaPrincipalComponent,
     CadastarMoradorComponent,
-    VisualizarMoradoresComponent
+    VisualizarMoradoresComponent,
+    TabelaComponent,
+    MinhaContaComponent,
+    EventosComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    JwtModule.forRoot({
+      config: {
+        tokenGetter: tokenGetter,
+        allowedDomains: ["example.com"],
+        disallowedRoutes: ["http://example.com/examplebadroute/"],
+      },
+    }),
     // Angular Material
     MatIconModule,
     MatListModule,
     MatToolbarModule,
+    FormsModule,
+    ReactiveFormsModule,
     MatFormFieldModule,
     MatButtonModule,
     MatInputModule,
@@ -58,7 +80,7 @@ import { VisualizarMoradoresComponent } from './visualizar-moradores/visualizar-
     MatSnackBarModule,
     MatTableModule,
     MatTooltipModule,
-    MatExpansionModule
+    MatExpansionModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
