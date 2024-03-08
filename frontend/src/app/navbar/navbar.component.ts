@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { LocalStorageService } from '../services/local-storage.service';
+import { AuthService } from '../auth/auth.service';
+
 
 @Component({
   selector: 'app-navbar',
@@ -8,12 +10,12 @@ import { LocalStorageService } from '../services/local-storage.service';
 })
 export class NavbarComponent {
 
-  constructor(private localStorageService: LocalStorageService){
+  constructor(private AuthService: AuthService){
 
   }
 
-  deslogar(){
-
+  logout(){
+    this.AuthService.logout()
   }
 
 }

@@ -31,6 +31,12 @@ import { TabelaComponent } from './tabela/tabela.component';
 import { MinhaContaComponent } from './minha-conta/minha-conta.component';
 import { EventosComponent } from './eventos/eventos.component';
 import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { JwtModule } from "@auth0/angular-jwt";
+
+
+export function tokenGetter() {
+  return localStorage.getItem("access_token");
+}
 
 @NgModule({
   declarations: [
@@ -49,6 +55,13 @@ import { FormControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
     AppRoutingModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    JwtModule.forRoot({
+      config: {
+        tokenGetter: tokenGetter,
+        allowedDomains: ["example.com"],
+        disallowedRoutes: ["http://example.com/examplebadroute/"],
+      },
+    }),
     // Angular Material
     MatIconModule,
     MatListModule,
